@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import HamburgerContent from "./components/hamburger-content/hamburger-content";
+import AlbumsProvider from "./contexts/albums";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import Home from "./pages/home/home";  
+import NotFound from "./pages/not-found/not-found";
+import SingleAlbum from "./pages/single-album/single-album";
+
+const App = () => {
+  return(
+    <AlbumsProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog-project" element={<Home />} />
+        <Route path="/album/:id" element={<SingleAlbum />} />
+        <Route path="/hamburger" element={<HamburgerContent />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </AlbumsProvider>
   );
-}
+};
 
 export default App;
