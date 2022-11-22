@@ -22,11 +22,53 @@
   }
 }
 
-.nav-times {
-  display: flex;
+// Burger menu
+
+.burger-menu {
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
-  // display: none;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-bar {
+  width: 20px;
+  height: 3px;
+
+  margin: 2px;
+  background-color: #000;
+  border-radius: .5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+// Animation
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(5.5px, 2px);
+  transition: ease-out .3s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform:scale(0.1);
+  transition: out .3s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-5.5px, 2px);
+  transition: ease-out .3s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
 
 // Responsive
@@ -138,5 +180,9 @@
       height: 33px;
       margin-right: 6px;
     }
+  }
+
+  .burger-menu {
+    display: block;
   }
 }

@@ -9,10 +9,10 @@ const Intro = () => {
       <h2>What I do!</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis.</p>
       <div className="intro-social__media-links">
-        <Link className="link" to="/"><FaFacebookF /></Link>
-        <Link className="link" to="/"><FaGithub /></Link>
-        <Link className="link" to="/"><FaTwitter /></Link>
-        <Link className="link" to="/"><FaLinkedinIn /></Link>
+        <Link className="link" to="https://facebook.com/"><FaFacebookF /></Link>
+        <Link className="link" to="https://github.com/"><FaGithub /></Link>
+        <Link className="link" to="https://twitter.com/"><FaTwitter /></Link>
+        <Link className="link" to="https://linkedin.com/"><FaLinkedinIn /></Link>
       </div>
     </div>
   );

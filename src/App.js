@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import HamburgerContent from "./components/hamburger-content/hamburger-content";
 import AlbumsProvider from "./contexts/albums";
 
 import Home from "./pages/home/home";  
@@ -13,7 +12,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blog-project" element={<Home />} />
         <Route path="/album/:id" element={<SingleAlbum />} />
-        <Route path="/hamburger" element={<HamburgerContent />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AlbumsProvider>
