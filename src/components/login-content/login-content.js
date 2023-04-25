@@ -52,7 +52,7 @@ const LoginContent = () => {
       <input className="login-input__email" ref={emailRef} type="email" placeholder="Email" />
       <input className="login-input__password" ref={passwordRef} type="password" placeholder="Password" />
       <button className="login-btn" disabled={loading} type="submit">
-        Submit
+        submit
       </button>
       <span style={{ color: "red" }}>{error}</span>
     </form>
